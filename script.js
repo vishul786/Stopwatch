@@ -45,18 +45,18 @@ function reset(){
     display.innerHTML = getTimer()   
 }
 
-// function restart(){
-//     if(timer){
-//         reset()
-//         start()
-//     }
-// }
+function restart(){
+    if(timer){
+        reset()
+        start()
+    }
+}
 
 function lap(){
     if(timer){
         var li = document.createElement("li")
         li.innerHTML = getTimer()
-        laps.appendChild(li)
+        laps.prepend(li)
 
     }
 
